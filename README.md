@@ -6,6 +6,7 @@ Check if a string is a valid CIDR
 [![version](https://img.shields.io/npm/v/is-cidr.svg?style=flat-square)](http://npm.im/is-cidr)
 [![MIT License](https://img.shields.io/npm/l/is-cidr.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![travis build](https://img.shields.io/travis/flipjs/is-cidr.svg?style=flat-square)](https://travis-ci.org/flipjs/is-cidr)
+[![Codecov](https://img.shields.io/codecov/c/github/flipjs/is-cidr.svg?style=flat-square)](https://codecov.io/github/flipjs/is-cidr)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![downloads](https://img.shields.io/npm/dm/is-cidr.svg?style=flat-square)](http://npm-stat.com/charts.html?package=is-cidr&from=2016-03-24)
