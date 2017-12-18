@@ -10,7 +10,7 @@ publish:
 	npm publish
 
 update:
-	./updates.js -u
+	node_modules/.bin/updates -u
 	rm -rf node_modules
 	yarn
 

@@ -26,10 +26,10 @@
   ],
   "devDependencies": {
     "ava": "^0.24.0",
-    "eslint": "^4.13.0",
+    "eslint": "^4.13.1",
     "updates": "^2.0.3"
   },
   "dependencies": {
-    "cidr-regex": "^2.0.1"
+    "cidr-regex": "^2.0.5"
   }
 }
