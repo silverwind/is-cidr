@@ -1,16 +1,15 @@
-lint:
-	eslint --color --quiet *.js
+BIN:=node_modules/.bin
 
 test:
-	$(MAKE) lint
-	ava
+	$(BIN)/eslint --color --quiet *.js
+	$(BIN)/ava
 
 publish:
 	git push -u --tags origin master
 	npm publish
 
 update:
-	node_modules/.bin/updates -u
+	$(BIN)/updates -u
 	rm -rf node_modules
 	yarn
 
@@ -23,8 +22,8 @@ npm-minor:
 npm-major:
 	npm version major
 
-patch: lint test npm-patch publish
-minor: lint test npm-minor publish
-major: lint test npm-major publish
+patch: test npm-patch publish
+minor: test npm-minor publish
+major: test npm-major publish
 
-.PHONY: lint test touch update patch minor major npm-patch npm-minor npm-major
+.PHONY: test publish update patch minor major npm-patch npm-minor npm-major
