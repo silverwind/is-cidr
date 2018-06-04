@@ -29,9 +29,9 @@
   ],
   "devDependencies": {
     "ava": "^0.25.0",
-    "eslint": "^4.18.2",
-    "eslint-config-silverwind": "^1.0.37",
-    "updates": "^2.3.1"
+    "eslint": "^4.19.1",
+    "eslint-config-silverwind": "^1.0.42",
+    "updates": "^3.0.0"
   },
   "dependencies": {
     "cidr-regex": "^2.0.8"
