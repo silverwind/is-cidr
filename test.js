@@ -1,7 +1,7 @@
 "use strict";
 
-import test from "ava";
-import isCidr from ".";
+const isCidr = require(".");
+const assert = require("assert");
 
 const v4positive = [
   "0.0.0.0/16",
@@ -383,19 +383,13 @@ const v6negative = [
   "':10.0.0./641",
 ];
 
-test("cidr", t => {
-  v4positive.forEach(string => t.true(isCidr(string)));
-  v4negative.forEach(string => t.false(isCidr(string)));
-  v6positive.forEach(string => t.true(isCidr(string)));
-  v6negative.forEach(string => t.false(isCidr(string)));
-});
+v4positive.forEach(string => assert.deepStrictEqual(isCidr(string), true));
+v4negative.forEach(string => assert.deepStrictEqual(isCidr(string), false));
+v6positive.forEach(string => assert.deepStrictEqual(isCidr(string), true));
+v6negative.forEach(string => assert.deepStrictEqual(isCidr(string), false));
 
-test("cidr v4", t => {
-  v4positive.forEach(string => t.true(isCidr.v4(string)));
-  v4negative.forEach(string => t.false(isCidr.v4(string)));
-});
+v4positive.forEach(string => assert.deepStrictEqual(isCidr.v4(string), true));
+v4negative.forEach(string => assert.deepStrictEqual(isCidr.v4(string), false));
 
-test("cidr v6", t => {
-  v6positive.forEach(string => t.true(isCidr.v6(string)));
-  v6negative.forEach(string => t.false(isCidr.v6(string)));
-});
+v6positive.forEach(string => assert.deepStrictEqual(isCidr.v6(string), true));
+v6negative.forEach(string => assert.deepStrictEqual(isCidr.v6(string), false));

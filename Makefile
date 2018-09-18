@@ -1,29 +1,33 @@
-BIN:=node_modules/.bin
-
+.PHONY: test
 test:
-	$(BIN)/eslint --color --quiet *.js
-	$(BIN)/ava
+	npx eslint --color --quiet *.js
+	node --pending-deprecation --trace-deprecation --throw-deprecation --trace-warnings test.js
 
+.PHONY: publish
 publish:
 	git push -u --tags origin master
 	npm publish
 
+.PHONY: update
 update:
-	$(BIN)/updates -u
+	npx updates -u
 	rm -rf node_modules
-	yarn
+	npm i
 
-npm-patch:
-	npm version patch
+.PHONY: patch
+patch:
+	$(MAKE) test
+	npx ver patch
+	$(MAKE) publish
 
+.PHONY: minor
 npm-minor:
-	npm version minor
+	$(MAKE) test
+	npx ver minor
+	$(MAKE) publish
 
+.PHONY: major
 npm-major:
-	npm version major
-
-patch: test npm-patch publish
-minor: test npm-minor publish
-major: test npm-major publish
-
-.PHONY: test publish update patch minor major npm-patch npm-minor npm-major
+	$(MAKE) test
+	npx ver major
+	$(MAKE) publish
