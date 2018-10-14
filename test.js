@@ -383,10 +383,10 @@ const v6negative = [
   "':10.0.0./641",
 ];
 
-v4positive.forEach(string => assert.deepStrictEqual(isCidr(string), true));
-v4negative.forEach(string => assert.deepStrictEqual(isCidr(string), false));
-v6positive.forEach(string => assert.deepStrictEqual(isCidr(string), true));
-v6negative.forEach(string => assert.deepStrictEqual(isCidr(string), false));
+v4positive.forEach(string => assert.deepStrictEqual(isCidr(string), 4));
+v4negative.forEach(string => assert.deepStrictEqual(isCidr(string), 0));
+v6positive.forEach(string => assert.deepStrictEqual(isCidr(string), 6));
+v6negative.forEach(string => assert.deepStrictEqual(isCidr(string), 0));
 
 v4positive.forEach(string => assert.deepStrictEqual(isCidr.v4(string), true));
 v4negative.forEach(string => assert.deepStrictEqual(isCidr.v4(string), false));
