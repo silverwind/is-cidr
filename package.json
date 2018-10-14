@@ -25,15 +25,16 @@
     "prefix",
     "prefixes",
     "ip",
-    "ip address"
+    "ip address",
+    "network"
   ],
+  "dependencies": {
+    "cidr-regex": "^2.0.10"
+  },
   "devDependencies": {
     "eslint": "^5.6.0",
     "eslint-config-silverwind": "^2.0.9",
     "updates": "^4.3.0",
     "ver": "^2.0.1"
-  },
-  "dependencies": {
-    "cidr-regex": "^2.0.10"
   }
 }
