@@ -21,13 +21,13 @@ patch:
 	$(MAKE) publish
 
 .PHONY: minor
-npm-minor:
+minor:
 	$(MAKE) test
 	npx ver minor
 	$(MAKE) publish
 
 .PHONY: major
-npm-major:
+major:
 	$(MAKE) test
 	npx ver major
 	$(MAKE) publish
