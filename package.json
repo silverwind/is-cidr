@@ -15,7 +15,8 @@
     "node": ">=6"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "keywords": [
     "cidr",
@@ -32,8 +33,9 @@
     "cidr-regex": "^2.0.10"
   },
   "devDependencies": {
-    "eslint": "^5.7.0",
-    "eslint-config-silverwind": "^2.0.9",
+    "eslint": "^5.16.0",
+    "eslint-config-silverwind": "^2.1.0",
+    "tsd": "^0.7.2",
     "updates": "^4.5.2",
     "ver": "^3.0.0"
   }

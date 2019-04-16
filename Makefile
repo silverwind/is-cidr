@@ -2,6 +2,7 @@
 test:
 	npx eslint --color --quiet *.js
 	node --pending-deprecation --trace-deprecation --throw-deprecation --trace-warnings test.js
+	npx tsd
 
 .PHONY: publish
 publish:
