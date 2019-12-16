@@ -36,6 +36,75 @@ const v4negative = [
   "999.2.3.4/8",
 ];
 
+const v4positiveStrict = [
+  "10.0.0.0/32",
+  "10.0.0.0/31",
+  "10.0.0.0/30",
+  "10.0.0.0/29",
+  "10.0.0.0/28",
+  "10.0.0.0/27",
+  "10.0.0.0/26",
+  "10.0.0.0/25",
+  "10.0.0.0/24",
+  "10.0.0.0/23",
+  "10.0.0.0/22",
+  "10.0.0.0/21",
+  "10.0.0.0/20",
+  "10.0.0.0/19",
+  "10.0.0.0/18",
+  "10.0.0.0/17",
+  "10.0.0.0/16",
+  "10.0.0.0/15",
+  "10.0.0.0/14",
+  "10.0.0.0/13",
+  "10.0.0.0/12",
+  "10.0.0.0/11",
+  "10.0.0.0/10",
+  "10.0.0.0/9",
+  "10.0.0.0/8",
+  "10.0.0.0/7",
+  "8.0.0.0/6",
+  "8.0.0.0/5",
+  "0.0.0.0/4",
+  "0.0.0.0/3",
+  "0.0.0.0/2",
+  "0.0.0.0/1",
+];
+
+const v4negativeStrict = [
+  "10.0.0.1/31",
+  "10.0.0.1/30",
+  "10.0.0.1/29",
+  "10.0.0.1/28",
+  "10.0.0.1/27",
+  "10.0.0.1/26",
+  "10.0.0.1/25",
+  "10.0.0.1/24",
+  "10.0.0.1/23",
+  "10.0.0.1/22",
+  "10.0.0.1/21",
+  "10.0.0.1/20",
+  "10.0.0.1/19",
+  "10.0.0.1/18",
+  "10.0.0.1/17",
+  "10.0.0.1/16",
+  "10.0.0.1/15",
+  "10.0.0.1/14",
+  "10.0.0.1/13",
+  "10.0.0.1/12",
+  "10.0.0.1/11",
+  "10.0.0.1/10",
+  "10.0.0.1/9",
+  "10.0.0.1/8",
+  "10.0.0.1/7",
+  "8.0.0.1/6",
+  "8.0.0.1/5",
+  "0.0.0.1/4",
+  "0.0.0.1/3",
+  "0.0.0.1/2",
+  "0.0.0.1/1",
+];
+
 const v6positive = [
   "fe80:0000:0000:0000:0204:61ff:fe9d:f156/0",
   "fe80:0000:0000:0000:0204:61ff:fe9d:f156/1",
@@ -384,12 +453,16 @@ const v6negative = [
 ];
 
 v4positive.forEach(string => assert.deepStrictEqual(isCidr(string), 4));
+v4positiveStrict.forEach(string => assert.deepStrictEqual(isCidr(string, true), 4));
 v4negative.forEach(string => assert.deepStrictEqual(isCidr(string), 0));
+v4negativeStrict.forEach(string => assert.deepStrictEqual(isCidr(string, true), 0));
 v6positive.forEach(string => assert.deepStrictEqual(isCidr(string), 6));
 v6negative.forEach(string => assert.deepStrictEqual(isCidr(string), 0));
 
 v4positive.forEach(string => assert.deepStrictEqual(isCidr.v4(string), true));
+v4positiveStrict.forEach(string => assert.deepStrictEqual(isCidr.v4(string, true), true));
 v4negative.forEach(string => assert.deepStrictEqual(isCidr.v4(string), false));
+v4negativeStrict.forEach(string => assert.deepStrictEqual(isCidr.v4(string, true), false));
 
 v6positive.forEach(string => assert.deepStrictEqual(isCidr.v6(string), true));
 v6negative.forEach(string => assert.deepStrictEqual(isCidr.v6(string), false));

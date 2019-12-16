@@ -10,12 +10,12 @@ declare const isCidr: {
   isCidr('10.0.0.0'); //=> 0
   ```
   */
-  (string: string): 6 | 4 | 0;
+  (string: string, strict?: boolean): 6 | 4 | 0;
 
   /**
   Check if `string` is a IPv4 CIDR address.
   */
-  v4(string: string): boolean;
+  v4(string: string, strict?: boolean): boolean;
 
   /**
   Check if `string` is a IPv6 CIDR address.

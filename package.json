@@ -30,7 +30,8 @@
     "network"
   ],
   "dependencies": {
-    "cidr-regex": "^2.0.10"
+    "cidr-regex": "^2.0.10",
+    "ipaddr.js": "^1.9.1"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
