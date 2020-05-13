@@ -12,7 +12,7 @@
     "test": "make test"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   },
   "files": [
     "index.js",
@@ -30,7 +30,7 @@
     "network"
   ],
   "dependencies": {
-    "cidr-regex": "^2.0.10"
+    "cidr-regex": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "7.0.0",
