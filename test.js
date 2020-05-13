@@ -1,7 +1,4 @@
-"use strict";
-
 const isCidr = require(".");
-const assert = require("assert");
 
 const v4positive = [
   "0.0.0.0/16",
@@ -383,13 +380,19 @@ const v6negative = [
   "':10.0.0./641",
 ];
 
-v4positive.forEach(string => assert.deepStrictEqual(isCidr(string), 4));
-v4negative.forEach(string => assert.deepStrictEqual(isCidr(string), 0));
-v6positive.forEach(string => assert.deepStrictEqual(isCidr(string), 6));
-v6negative.forEach(string => assert.deepStrictEqual(isCidr(string), 0));
+test("isCidr", () => {
+  for (const string of v4positive) expect(isCidr(string)).toEqual(4);
+  for (const string of v4negative) expect(isCidr(string)).toEqual(0);
+  for (const string of v6positive) expect(isCidr(string)).toEqual(6);
+  for (const string of v6negative) expect(isCidr(string)).toEqual(0);
+});
 
-v4positive.forEach(string => assert.deepStrictEqual(isCidr.v4(string), true));
-v4negative.forEach(string => assert.deepStrictEqual(isCidr.v4(string), false));
+test("isCidr.v4", () => {
+  for (const string of v4positive) expect(isCidr.v4(string)).toEqual(true);
+  for (const string of v4negative) expect(isCidr.v4(string)).toEqual(false);
+});
 
-v6positive.forEach(string => assert.deepStrictEqual(isCidr.v6(string), true));
-v6negative.forEach(string => assert.deepStrictEqual(isCidr.v6(string), false));
+test("isCidr.v6", () => {
+  for (const string of v6positive) expect(isCidr.v6(string)).toEqual(true);
+  for (const string of v6negative) expect(isCidr.v6(string)).toEqual(false);
+});

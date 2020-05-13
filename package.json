@@ -33,9 +33,14 @@
     "cidr-regex": "^2.0.10"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-silverwind": "^5.0.0",
-    "updates": "^9.1.0",
-    "versions": "7.0.2"
+    "eslint": "^7.0.0",
+    "eslint-config-silverwind": "^13.1.0",
+    "jest": "26.0.1",
+    "updates": "^10.2.11",
+    "versions": "8.2.9"
+  },
+  "jest": {
+    "verbose": false,
+    "testTimeout": 10000
   }
 }
