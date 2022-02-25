@@ -39,6 +39,7 @@ Check if `input` is a IPv6 CIDR address. Returns a boolean.
 - [cidr-regex](https://github.com/silverwind/cidr-regex) - Regular expression for matching IP addresses in CIDR notation
 - [is-ip](https://github.com/sindresorhus/is-ip) - Check if a string is an IP address
 - [ip-regex](https://github.com/sindresorhus/ip-regex) - Regular expression for matching IP addresses
+- [cidr-tools](https://github.com/silverwind/cidr-tools) - Tools to work with IPv4 and IPv6 CIDR network lists
 
 ## License
 
