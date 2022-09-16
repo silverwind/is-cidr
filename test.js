@@ -1,4 +1,4 @@
-const isCidr = require(".");
+import isCidr, {v4, v6} from "./index.js";
 
 const v4positive = [
   "0.0.0.0/16",
@@ -380,19 +380,16 @@ const v6negative = [
   "':10.0.0./641",
 ];
 
-test("isCidr", () => {
+test("test", () => {
   for (const string of v4positive) expect(isCidr(string)).toEqual(4);
   for (const string of v4negative) expect(isCidr(string)).toEqual(0);
   for (const string of v6positive) expect(isCidr(string)).toEqual(6);
   for (const string of v6negative) expect(isCidr(string)).toEqual(0);
-});
-
-test("isCidr.v4", () => {
   for (const string of v4positive) expect(isCidr.v4(string)).toEqual(true);
   for (const string of v4negative) expect(isCidr.v4(string)).toEqual(false);
-});
-
-test("isCidr.v6", () => {
   for (const string of v6positive) expect(isCidr.v6(string)).toEqual(true);
   for (const string of v6negative) expect(isCidr.v6(string)).toEqual(false);
+
+  expect(v4).toEqual(isCidr.v4);
+  expect(v6).toEqual(isCidr.v6);
 });

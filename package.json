@@ -8,9 +8,8 @@
   ],
   "repository": "silverwind/is-cidr",
   "license": "BSD-2-Clause",
-  "scripts": {
-    "test": "make test"
-  },
+  "type": "module",
+  "sideEffects": false,
   "engines": {
     "node": ">=14"
   },

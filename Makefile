@@ -1,32 +1,41 @@
-test:
-	yarn -s run jest --color
-	yarn -s run eslint --color .
+node_modules: package-lock.json
+	npm install --no-save
+	@touch node_modules
 
-unittest:
-	yarn -s run jest --color --watchAll
+.PHONY: deps
+deps: node_modules
 
-publish:
+.PHONY: lint
+lint: node_modules
+	npx eslint --color .
+
+.PHONY: test
+test: node_modules
+	NODE_OPTIONS="--experimental-vm-modules --no-warnings" npx jest --color
+
+.PHONY: publish
+publish: node_modules
 	git push -u --tags origin master
 	npm publish
 
-deps:
-	rm -rf node_modules
-	yarn
+.PHONY: update
+update: node_modules
+	npx updates -cu
+	rm package-lock.json
+	npm install
+	@touch node_modules
 
-update:
-	yarn -s run updates -cu
-	$(MAKE) deps
+.PHONY: path
+patch: node_modules lint test
+	npx versions -C patch
+	@$(MAKE) --no-print-directory publish
 
-patch: test
-	yarn -s run versions -C patch
-	$(MAKE) publish
+.PHONY: minor
+minor: node_modules lint test
+	npx versions -C minor
+	@$(MAKE) --no-print-directory publish
 
-minor: test
-	yarn -s run versions -C minor
-	$(MAKE) publish
-
-major: test
-	yarn -s run versions -C major
-	$(MAKE) publish
-
-.PHONY: test unittest publish deps update patch minor major
+.PHONY: major
+major: node_modules lint test
+	npx versions -C major
+	@$(MAKE) --no-print-directory publish
