@@ -9,6 +9,7 @@
   "repository": "silverwind/is-cidr",
   "license": "BSD-2-Clause",
   "type": "module",
+  "main": "./index.js",
   "sideEffects": false,
   "engines": {
     "node": ">=14"
