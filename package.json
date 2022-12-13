@@ -27,16 +27,5 @@
     "updates": "13.1.10",
     "versions": "10.0.4",
     "vitest": "0.24.3"
-  },
-  "keywords": [
-    "cidr",
-    "regex",
-    "notation",
-    "cidr notation",
-    "prefix",
-    "prefixes",
-    "ip",
-    "ip address",
-    "network"
-  ]
+  }
 }
