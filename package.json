@@ -22,10 +22,10 @@
     "cidr-regex": "4.0.2"
   },
   "devDependencies": {
-    "eslint": "8.26.0",
-    "eslint-config-silverwind": "59.0.1",
-    "updates": "13.1.10",
-    "versions": "10.0.4",
-    "vitest": "0.24.3"
+    "eslint": "8.29.0",
+    "eslint-config-silverwind": "64.0.2",
+    "updates": "13.2.4",
+    "versions": "10.4.1",
+    "vitest": "0.25.8"
   }
 }
