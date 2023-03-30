@@ -13,7 +13,7 @@ npm i is-cidr
 ## Usage
 
 ```js
-const isCidr = require("is-cidr");
+import isCidr from "is-cidr";
 
 isCidr("192.168.0.1/24"); //=> 4
 isCidr("1:2:3:4:5:6:7:8/64"); //=> 6
