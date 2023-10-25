@@ -1,6 +1,5 @@
 # is-cidr
-
-[![](https://img.shields.io/npm/v/is-cidr.svg?style=flat)](https://www.npmjs.org/package/is-cidr) [![](https://img.shields.io/npm/dm/is-cidr.svg)](https://www.npmjs.org/package/is-cidr)
+[![](https://img.shields.io/npm/v/is-cidr.svg?style=flat)](https://www.npmjs.org/package/is-cidr) [![](https://img.shields.io/npm/dm/is-cidr.svg)](https://www.npmjs.org/package/is-cidr) [![](https://packagephobia.com/badge?p=is-cidr)](https://packagephobia.com/result?p=is-cidr)
 
 > Check if a string is an IP address in CIDR notation
 
