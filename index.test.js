@@ -380,7 +380,7 @@ const v6negative = [
   "':10.0.0./641",
 ];
 
-test("test", () => {
+test("correctness", () => {
   for (const string of v4positive) expect(isCidr(string)).toEqual(4);
   for (const string of v4negative) expect(isCidr(string)).toEqual(0);
   for (const string of v6positive) expect(isCidr(string)).toEqual(6);
