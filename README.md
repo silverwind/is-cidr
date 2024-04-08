@@ -23,15 +23,15 @@ isCidr.v6("10.0.0.0/24"); //=> false
 ## API
 ### isCidr(input)
 
-Check if `input` is a IPv4 or IPv6 CIDR address. Returns either `4`, `6` (indicating the IP version) or `0` if the string is not a CIDR.
+Check if `input` is a IPv4 or IPv6 CIDR. Returns either `4`, `6` (indicating the IP version) or `0` if the string is not a CIDR.
 
 ### isCidr.v4(input)
 
-Check if `input` is a IPv4 CIDR address. Returns a boolean.
+Check if `input` is a IPv4 CIDR. Returns a boolean.
 
 ### isCidr.v6(input)
 
-Check if `input` is a IPv6 CIDR address. Returns a boolean.
+Check if `input` is a IPv6 CIDR. Returns a boolean.
 
 ## Related
 

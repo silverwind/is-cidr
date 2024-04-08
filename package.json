@@ -19,15 +19,15 @@
     "index.d.ts"
   ],
   "dependencies": {
-    "cidr-regex": "4.0.3"
+    "cidr-regex": "4.0.4"
   },
   "devDependencies": {
     "eslint": "8.57.0",
-    "eslint-config-silverwind": "82.0.6",
-    "tsd": "0.30.7",
+    "eslint-config-silverwind": "83.0.1",
+    "tsd": "0.31.0",
     "updates": "16.0.0",
     "versions": "12.0.1",
     "vitest": "1.4.0",
-    "vitest-config-silverwind": "7.0.2"
+    "vitest-config-silverwind": "7.0.3"
   }
 }
