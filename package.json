@@ -19,7 +19,7 @@
     "index.d.ts"
   ],
   "dependencies": {
-    "cidr-regex": "4.0.4"
+    "cidr-regex": "^4.0.4"
   },
   "devDependencies": {
     "eslint": "8.57.0",
