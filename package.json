@@ -1,6 +1,6 @@
 {
   "name": "is-cidr",
-  "version": "5.0.5",
+  "version": "5.1.0",
   "description": "Check if a string is an IP address in CIDR notation",
   "author": "silverwind <me@silverwind.io>",
   "contributors": [
