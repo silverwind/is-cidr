@@ -1,3 +1,6 @@
+SOURCE_FILES := index.ts
+DIST_FILES := dist/index.js
+
 node_modules: package-lock.json
 	npm install --no-save
 	@touch node_modules
@@ -7,12 +10,27 @@ deps: node_modules
 
 .PHONY: lint
 lint: node_modules
-	npx eslint --color .
+	npx eslint --ext js,jsx,ts,tsx --color .
+	npx tsc
+
+.PHONY: lint-fix
+lint-fix: node_modules
+	npx eslint --ext js,jsx,ts,tsx --color . --fix
+	npx tsc
 
 .PHONY: test
 test: node_modules
 	npx vitest
-	npx tsd
+
+.PHONY: test-update
+test-update: node_modules
+	npx vitest -u
+
+.PHONY: build
+build: node_modules $(DIST_FILES)
+
+$(DIST_FILES): $(SOURCE_FILES) package-lock.json vite.config.ts
+	npx vite build
 
 .PHONY: publish
 publish: node_modules
@@ -27,16 +45,16 @@ update: node_modules
 	@touch node_modules
 
 .PHONY: path
-patch: node_modules lint test
+patch: node_modules lint test build
 	npx versions patch package.json package-lock.json
 	@$(MAKE) --no-print-directory publish
 
 .PHONY: minor
-minor: node_modules lint test
+minor: node_modules lint test build
 	npx versions minor package.json package-lock.json
 	@$(MAKE) --no-print-directory publish
 
 .PHONY: major
-major: node_modules lint test
+major: node_modules lint test build
 	npx versions major package.json package-lock.json
 	@$(MAKE) --no-print-directory publish

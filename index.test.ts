@@ -1,4 +1,4 @@
-import isCidr, {v4, v6} from "./index.js";
+import isCidr, {v4, v6} from "./index.ts";
 
 const v4positive = [
   "0.0.0.0/16",
