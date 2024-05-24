@@ -1,7 +1,7 @@
 import {defineConfig} from "vite";
-import {lib} from "vite-config-silverwind";
+import {nodeLib} from "vite-config-silverwind";
 
-export default defineConfig(lib({
+export default defineConfig(nodeLib({
   url: import.meta.url,
   build: {
     target: "node14",
