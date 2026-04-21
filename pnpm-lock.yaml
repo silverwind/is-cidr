@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       cidr-regex:
-        specifier: ^5.0.3
-        version: 5.0.3
+        specifier: ^5.0.4
+        version: 5.0.4
     devDependencies:
       '@types/node':
         specifier: 25.6.0
@@ -615,8 +615,8 @@ packages:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
 
-  cidr-regex@5.0.3:
-    resolution: {integrity: sha512-zfPT2uurEroxXqefaL2L7/fT5ED2XTutC6UwFbSZfqSOk1vk5VFY6xa6/R6pBxB4Uc8MNPbRW5ykqutFG5P5ww==}
+  cidr-regex@5.0.4:
+    resolution: {integrity: sha512-RqFFeOfTjrYz0UAb40jeDnrkOyIo1whw/Qsj/7fC+XArortgpoDUHwQidvuAMmGI8vPjhis6kJTwUhwGjmYhSQ==}
     engines: {node: '>=20'}
 
   color-convert@2.0.1:
@@ -1839,7 +1839,7 @@ snapshots:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  cidr-regex@5.0.3: {}
+  cidr-regex@5.0.4: {}
 
   color-convert@2.0.1:
     dependencies:
