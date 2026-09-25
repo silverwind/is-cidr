@@ -6,7 +6,10 @@
   "contributors": [
     "Felipe Apostol <flipjs.io@gmail.com> (http://flipjs.io/)"
   ],
-  "repository": "silverwind/is-cidr",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silverwind/is-cidr.git"
+  },
   "license": "BSD-2-Clause",
   "keywords": [
     "cidr",
