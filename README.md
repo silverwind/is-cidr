@@ -3,13 +3,11 @@
 
 > Check if a string is an IP address in CIDR notation
 
-## Install
-
-```
-npm i is-cidr
-```
-
 ## Usage
+
+```sh
+pnpm add is-cidr
+```
 
 ```js
 import isCidr from "is-cidr";
@@ -23,25 +21,23 @@ isCidr.v6("10.0.0.0/24"); //=> false
 ## API
 ### isCidr(input)
 
-Check if `input` is a IPv4 or IPv6 CIDR. Returns either `4`, `6` (indicating the IP version) or `0` if the string is not a CIDR.
+Check if `input` is an IPv4 or IPv6 CIDR. Returns either `4`, `6` (indicating the IP version) or `0` if the string is not a CIDR.
 
 ### isCidr.v4(input)
 
-Check if `input` is a IPv4 CIDR. Returns a boolean.
+Check if `input` is an IPv4 CIDR. Returns a boolean.
 
 ### isCidr.v6(input)
 
-Check if `input` is a IPv6 CIDR. Returns a boolean.
+Check if `input` is an IPv6 CIDR. Returns a boolean.
 
 ## Related
 
 - [ip-bigint](https://github.com/silverwind/ip-bigint) - Convert IPv4 and IPv6 addresses to native BigInt and vice-versa
 - [ip-regex](https://github.com/sindresorhus/ip-regex) - Regular expression for matching IP addresses
 - [is-ip](https://github.com/sindresorhus/is-ip) - Check if a string is an IP address
-- [cidr-regex](https://github.com/silverwind/cidr-regex) - Check if a string is an IP address in CIDR notation
+- [cidr-regex](https://github.com/silverwind/cidr-regex) - Regular expression for matching IP addresses in CIDR notation and bare IP addresses
 - [cidr-tools](https://github.com/silverwind/cidr-tools) - Tools to work with IPv4 and IPv6 CIDR network lists
-
-## License
 
 © [silverwind](https://github.com/silverwind), distributed under BSD licence
 
